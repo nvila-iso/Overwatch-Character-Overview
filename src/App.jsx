@@ -1,11 +1,11 @@
 import "./App.css";
-import CharacterCard from "./components/CharacterCard";
-import useOverwatch from "./components/getCharacters";
+import CharacterList from "./components/CharacterList";
+
 function App() {
-  const { data } = useOverwatch();
+
   return (
     <>
-      <CharacterCard />
+      <CharacterList />
     </>
   );
 }

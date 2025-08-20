@@ -1,9 +1,13 @@
-const CharacterCard = () => {
+const CharacterCard = ({ character }) => {
   return (
-    <div className="character-container">
-      <div className="chara-img"></div>
-      <div className="chara-desc"></div>
-      <div className="chara-role"></div>
+    <div className="grid">
+      <div className="character-container">
+        <div className="chara-img">
+          <img src={character.portrait} />
+        </div>
+        <div className="chara-name">{character.name}</div>
+        <div className="chara-role">{character.role}</div>
+      </div>
     </div>
   );
 };

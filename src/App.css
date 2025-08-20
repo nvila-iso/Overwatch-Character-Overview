@@ -1,6 +1,42 @@
-.character-container {
-  border: 1px solid black;
-  border-radius: 0.2rem;
-  height: 250px;
+:root {
+  --bg: #2b2f36;
+  --surface: #383e48;
+  --elevated: #434a56;
+  --text: #ecebee;
+  --muted: #a5adba;
+  --border: #4a5260;
+  --shadow: #161a20;
+
+  --accent: #5aa0ff;
+  --accent-2: #7bd389;
+  --accent-3: #f0b77a;
+  --accent-4: #c6b6ff;
 }
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--bg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.grid {
+  display: grid;
+  gap: 10px;
+}
+
+.character-container {
+  background-color: var(--accent);
+  height: 150px;
+  width: 200px;
+}
+
+.chara-img img {
+  height: 2rem;
+}
