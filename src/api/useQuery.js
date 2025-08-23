@@ -1,25 +1,36 @@
 import { useEffect, useState } from "react";
-import { useApi } from "./ApiProvider";
+import { useApi } from "./ApiContext";
 
-export default function useQuery(resource) {
-  const [data, setData] = useState([]);
+/** Queries the API and returns the data, loading status, and error message. */
+const useQuery = (resource, tag) => {
+  const { request, provideTag } = useApi();
+
+  const [data, setData] = useState();
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
-  const { requestGet } = useApi();
 
-  const getQuery = async () => {
+  const query = async () => {
     setLoading(true);
+    setError(null);
     try {
-      const result = await requestGet(resource);
+      const result = await request(resource);
       setData(result);
-    } catch (error) {
-      setError(error?.message);
+    } catch (e) {
+      console.error(e);
+      setError(e.message);
     } finally {
       setLoading(false);
     }
   };
+
   useEffect(() => {
-    getQuery();
+    if (tag) {
+      provideTag(tag, query);
+    }
+    query();
   }, []);
+
   return { data, loading, error };
-}
+};
+
+export default useQuery;
