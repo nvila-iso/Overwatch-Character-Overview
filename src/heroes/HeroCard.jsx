@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 const HeroCard = ({ hero }) => {
   const getRoleIcon = () => {
     if (hero.role === "tank") {

@@ -1,10 +1,13 @@
 import "../css/Main.css";
-
+import handleRoleSelect from "../components/handleRoleSelect";
 const FilterDisplay = () => {
   return (
     <>
       <div className="role-select inter-regular">
-        <div className="tank-select role-select-button">
+        <div
+          onClick={handleRoleSelect}
+          className="tank-select role-select-button"
+        >
           <p>tank</p>
         </div>
         <div className="damage-select role-select-button">
@@ -14,7 +17,9 @@ const FilterDisplay = () => {
           <p>support</p>
         </div>
       </div>
-      <div className="reset-button inter-regular"><p>reset</p></div>
+      <div className="reset-button inter-regular">
+        <p>reset</p>
+      </div>
     </>
   );
 };

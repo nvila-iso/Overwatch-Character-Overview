@@ -1,0 +1,9 @@
+@media screen and (max-width: 450px) {
+  .container {
+    width: 400px;
+  }
+
+  .role-select {
+    width: 80%;
+  }
+}

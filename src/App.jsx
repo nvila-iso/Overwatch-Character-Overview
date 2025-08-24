@@ -1,4 +1,4 @@
-import "./App.css";
+import "./css/media-queries.css";
 import { Routes, Route } from "react-router";
 import Layout from "./layout/Layout";
 import Display from "./layout/Display";

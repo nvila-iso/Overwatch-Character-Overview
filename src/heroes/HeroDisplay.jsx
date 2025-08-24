@@ -6,7 +6,6 @@ const HeroDisplay = () => {
 
   if (loading || !heroes) return <p>Loading...</p>;
   if (error) return <p>Sorry! {error}</p>;
-  console.log(heroes);
 
   return (
     <>

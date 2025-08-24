@@ -112,6 +112,8 @@ hr {
 .tank-select:hover {
   background-color: hsla(205deg, 80%, 68%, 100%);
   color: hsl(0, 0, 84%);
+  /* border: 1px solid hsla(205deg, 85%, 75%, 100%),
+    2px solid hsla(205deg, 85%, 80%, 100%); */
 }
 
 .damage-select {
